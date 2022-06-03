@@ -7,10 +7,8 @@ function CreateArea(props) {
   });
 
   function handleChange(event) {
-    //const{name,value}=event.target;
     const name = event.target.name;
     const value = event.target.value;
-    //whats does it mean ?
 
     if (name === "title") {
       setNote({
@@ -23,17 +21,9 @@ function CreateArea(props) {
         content: value
       });
     }
-
-    /*setNote(prevNote=>{
-    /  return {
-      ...prevNote,
-      [name]:value
-    } 
-      
-    })*/
   }
   function submitNote(event) {
-    props.onAdd(note); // ???
+    props.onAdd(note);
 
     setNote({
       title: "",
